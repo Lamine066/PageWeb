@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>Tp html</title>
+	
+	<style>
+	
+	h1{
+	
+	background-color: rgb(255, 133, 0);
+	color: white;
+	margin: 15px;
+	width: 95%;
+	
+}
+	 
+        h2 {
+            color: rgb(0, 0, 0);
+           
+        }  
+        
+        #LA {
+        	color: rgb(0,0,0);
+            
+        }
+		#LAM{
+			color: rgb(0,0,0);
+            
+        }
+
+		#LAMINE {
+            
+            color: rgb(0,0,0);
+            font-weight:  bolder;
+        }
+        
+        p {
+            color: rgb(0, 0, 0);
+            font-weight:  bold;
+        }
+
+	
+
+		.ville{
+            display: flex;
+			flex-warp: warp;
+			margin: 5px;
+			width: 90%;
+			box-sizing: border-box;
+		    height: 30%;
+        }
+			#LAMINEE {
+		
+			font-size: 10px;
+            font-weight:  10;
+            background-color:rgb(144,144,144); 
+			color: #000;
+			margin: 5%;
+			height: 33px;
+			width: 85%;
+        }
+
+		.ville div {
+			width: 90000px;
+			color: white;
+            border: solid 1px #000 ;
+            background-color: rgb(220,220,220);
+            margin: 40px;
+
+        }
+		</style>
+
+</head>
+
+<body onload ="showcity()">
+	 <h1><center>TP HTML </center></h1>
+	 <label for="ville-select">Veuillez choisir une ville </label>
+	 <select onchange=showcity() name="ville" id="Lim" >
+<option id=" ">Choose option please</option>
+<option id="BEJAIA">BEJAIA</option>
+<option id="MADRID">MADRID</option>
+<option id="BRUXELLE">BRUXELLE</option>
+</select>
+<script>
+function showcity() {
+  
+  let nomVilleSelectionnee = document.getElementById("Lim").value;
+  let cities = document.getElementsByClassName("city");
+  let l=cities.length;
+ 
+  for (let i=0; i<l; i++) {
+    cities[i].style.display= "none";
+  if (cities[i].id ==  nomVilleSelectionnee) {
+   cities[i].style.display= "block";
+	  
+  } 
+  else {
+  cities[i].style.display= "none";
+  }
+  }
+  }
+
+
+</script>
+
+	<div class="ville">
+	
+	
+    <div id="BEJAIA" class="city"   >
+    <h2 id="La">BEJAIA</h2>
+    <p>   11°C, ensoleillé</p>
+	<p>   4°C</p>
+	<img src="photo1.png" alt="photo meteo"  width="100">
+    </div>
+	
+    <div id ="MADRID" class="city">
+	<h2 id ="LAM">MADRID</h2>
+    <p>   5°C, orageux</p>
+	<p>   0°C</p>
+	<img src="photo.png" alt ="meteo"  width="100">
+    </div>
+	
+    <div id ="BRUXELLE" class="city">
+    <h2 id ="LAMINE">BRUXELLE</h2>
+    <p>   4°C, neige</p>
+	<p>   -6°C</p>
+	<img src="photo2.png" alt="photo meteo" width="100">
+	</div>
+
+
+	
+	</div>
+
+
+    <p id = "LAMINEE">Réaliser par: MOUHOUBI Lamine p1511922 <br>Icones meteo par <a href="https://thenounproject.com/search/collection/?q=weather">Nook Fulloption</a>.  </p>
+    
+
+</body>
+</html>
